@@ -1,5 +1,4 @@
-class MyClass:
-    'MyClass, just for test'
+class Father:
     name = ''
     age = 0
 
@@ -16,28 +15,17 @@ class MyClass:
         self.printAge()
 
 
-class1 = MyClass("lisper", 12)
-print(class1.__getName__())
-class1.printAge()
-class1.printInfo()
+person = Father("lisper", 12)
+print(person.__getName__())
+person.printAge()
+person.printInfo()
 
 print("\/" * 30);
-class MyClassChild(MyClass):
+class Child(Father):
     def __init__(self, name, age):
+        #Father.__init__(self,name,age)
         super().__init__(name, age)
 
-class2 = MyClassChild('tom', 10)
-class2.printInfo()
+person1 = Child('tom', 10)
+person1.printInfo()
 
-print("\/" * 30, end='\\\n')
-
-class MyClassChild2(MyClassChild):
-    def __init__(self, name):
-        super(MyClassChild2, self).__init__(name, 2)
-    def printInfo(self):
-        print("printInfo:")
-        super(MyClassChild2, self).printInfo()
-
-class3 = MyClassChild2('child2')
-class3.printInfo()
-print("\/" * 30, end='\\\n')
