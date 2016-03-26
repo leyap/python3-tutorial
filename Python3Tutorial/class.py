@@ -1,31 +1,44 @@
-class Father:
-    name = ''
-    age = 0
-
-    def __init__(self, name, age):
+class Animal:
+    def __init__(self, name):
         self.name = name
-        self.age = age
+    def printName(self):
+        print("Fish Name: " + self.name)
 
-    def printAge(self):
-        print('age:'+str(self.age))
-    def __getName__(self):
-        return self.name
-    def printInfo(self):
-        print("name="+self.__getName__())
-        self.printAge()
+class Fish(Animal):
+    def __init__(self, name, size):
+        Animal.name = name
+        self.size = size
+    def printName(self):
+        print("Animal Name: " + self.name)
+    def printSize(self):
+        print("size: " + str(self.size))
 
 
-person = Father("lisper", 12)
-print(person.__getName__())
-person.printAge()
-person.printInfo()
+a = Animal("tom")
+a.printName()
 
-print("\/" * 30);
-class Child(Father):
-    def __init__(self, name, age):
-        #Father.__init__(self,name,age)
-        super().__init__(name, age)
+b = Fish("jack", 12)
+b.printName()
+b.printSize()
 
-person1 = Child('tom', 10)
-person1.printInfo()
-
+if isinstance(a, Animal):
+    print("a is Animal")
+else:
+    print("a isn't Animal")
+    
+if isinstance(b, Animal):
+    print("b is Animal")
+else:
+    print("b isn't Animal")
+    
+if isinstance(a, Fish):
+    print("a is Fish")
+else:
+    print("a isn't a Fish")
+    
+if issubclass(Animal, Fish):
+    print("Animal is subclass of Fish")
+elif issubclass(Fish, Animal):
+    print("Fish is subclass of Animal")
+else:
+    print("oh!")
