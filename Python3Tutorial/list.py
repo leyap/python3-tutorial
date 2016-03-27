@@ -1,10 +1,3 @@
-s = set('hello')
-s.update("bc","ab","cd")
-print(s)
-
-l = list(s)
-l.sort()
-print(l)
 
 #same as list1 = list()
 list1 = []
@@ -79,3 +72,10 @@ print(a+b)
 
 
 
+s = set('hello')
+s.update("bc","ab","cd")
+print(s)
+
+l = list(s)
+l.sort()
+print(l)

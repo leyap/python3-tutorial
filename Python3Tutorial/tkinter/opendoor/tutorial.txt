@@ -1,0 +1,3 @@
+#pip3 install py2app
+#py2applet --make-setup opendoor_gui.py
+#python setup.py py2app
