@@ -1,3 +1,4 @@
+#!/usr/local/bin/python
 #导入turtle模块
 import turtle
 
